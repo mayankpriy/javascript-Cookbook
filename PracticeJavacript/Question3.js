@@ -26,3 +26,64 @@ Test data:
 § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 */
+
+
+/* Solution */
+
+const dolphinsScore=(96+108+89)/3 ;
+
+const koalasScore= (88+91+110)/3;
+
+if (dolphinsScore>koalasScore){
+   console.log (` Winner of the competition is Team Dolphins with score : ${dolphinsScore}`)
+
+}else if (dolphinsScore === koalasScore){
+    console.log( `Its a Draw between both teams and their scores are :
+    Team Dolphins :${dolphinsScore}
+    Team Koalas : ${koalasScore}`)
+}else {
+    console.log (` Winner of the competition is Team Koalas with score : ${koalasScore}`)
+}
+
+/* 
+Bonus 1 & Bonus 2
+
+ */
+
+// Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+
+const minimumWinScore=100;
+
+
+
+let koalasScoreOne =109
+let koalasScoreTwo =95 
+let koalasScoreThree=123
+
+const dolphinsAvgScore = (97+112+101)/3;
+
+const koalasAvgScore = (109+95+123)/3;
+
+const dolphinsQualifyingScoreCheck= dolphinsAvgScore >= minimumWinScore 
+
+const koalasQualifyingScoreCheck= koalasAvgScore >= minimumWinScore 
+
+
+
+ if (dolphinsQualifyingScoreCheck && dolphinsAvgScore > koalasAvgScore){
+    console.log(`The winner is Team Dolphins 🏆 with Point: ${dolphinsAvgScore} !`)
+ }
+
+ else if (koalasQualifyingScoreCheck && dolphinsAvgScore < koalasAvgScore)
+ {
+    console.log(`The winner is Team Koalas 🏆 with Point: ${koalasAvgScore} ! `)
+ }
+
+ else if (dolphinsQualifyingScoreCheck === koalasQualifyingScoreCheck && dolphinsAvgScore === koalasAvgScore)
+ {
+    console.log(`Its a draw ! 🏆 `)
+ }
+
+ else {
+    console.log (`No one win 👎🏻`)
+ }
